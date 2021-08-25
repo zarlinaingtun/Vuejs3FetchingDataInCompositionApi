@@ -1,5 +1,5 @@
 <template>
-<h1>Add Post Form</h1>
+<h1>Create Post Form</h1>
 <form @submit.prevent="addPost">
     <div class="form-control">
         <label>Title</label>
@@ -62,6 +62,7 @@ export default{
 <style scoped>
 h1{
     margin: 0;
+    text-align: center;
 }
 form{
     width:500px;

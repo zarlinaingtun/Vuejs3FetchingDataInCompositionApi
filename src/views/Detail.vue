@@ -1,5 +1,6 @@
 <template>
-  <div v-if="post">
+ <div class="post">
+    <div v-if="post">
     <h1>Detail {{id}}</h1>
   <h2>{{post.title}}</h2>
   <p>{{post.body}}</p>
@@ -7,6 +8,7 @@
   <div v-else>
     <Spinner></Spinner>
   </div>
+ </div>
 </template>
 
 <script>
@@ -25,5 +27,23 @@ setup(props){
 </script>
 
 <style>
-
+.post{
+    width:800px;
+    margin:40px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px violet;
+}
+.post h2{
+    display: inline-block;
+    background: yellow;
+    padding: 5px;
+    border-radius: 4px;
+}
+.post .pill{
+    display: inline-block;
+    background: gainsboro;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 5px;
+}
 </style>
