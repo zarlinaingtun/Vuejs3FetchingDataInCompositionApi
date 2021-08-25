@@ -1,4 +1,6 @@
 <template>
+<router-link :to="{name:'Home'}">Home</router-link> |
+<router-link :to="{name:'Create'}">Create Post</router-link>
    <h1>Home</h1>
    <div v-if="error">
      <p>{{error}}</p>
@@ -9,11 +11,12 @@
      <PostList :posts="posts"></PostList>
    </div>
    <div v-else>
-     Loading...
+     <Spinner></Spinner>
    </div>
 </template>
 
 <script>
+import Spinner from '../components/Spinner'
 import PostList from '../components/PostList'
 //composable function
 import getPosts from '../composables/getPosts'
@@ -21,6 +24,7 @@ import getPosts from '../composables/getPosts'
 
 export default {
   components: {
+    Spinner,
     PostList,   
   },
   setup(){
@@ -56,3 +60,6 @@ export default {
   }
 }
 </script>
+<style scoped>
+h1{text-align: center;}
+</style>

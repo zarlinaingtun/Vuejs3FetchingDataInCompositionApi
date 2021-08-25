@@ -1,12 +1,19 @@
 <template>
-  <h1>Detail {{id}}</h1>
+  <div v-if="post">
+    <h1>Detail {{id}}</h1>
   <h2>{{post.title}}</h2>
   <p>{{post.body}}</p>
+  </div>
+  <div v-else>
+    <Spinner></Spinner>
+  </div>
 </template>
 
 <script>
+import Spinner from '../components/Spinner'
 import getPost from '../composables/getPost'
 export default {
+  components: { Spinner },
     
 props:['id'],//id from dynamic route
 setup(props){
