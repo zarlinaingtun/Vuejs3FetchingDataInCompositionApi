@@ -10,14 +10,14 @@ let myPosts=()=>{
               setTimeout(resolve,2000);
           })
           let response=await fetch('http://localhost:3000/posts');
-          console.log(response);
+          // console.log(response);
     
           if(response.status===404){
             throw new Error("URL Not Found!");
           }
           
           let datas=await response.json();
-          console.log(datas);
+          // console.log(datas);
           posts.value=datas;
         }
         catch(err){
