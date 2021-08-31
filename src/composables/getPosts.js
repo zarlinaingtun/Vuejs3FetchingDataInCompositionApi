@@ -6,9 +6,9 @@ let myPosts=()=>{
     let load=async()=>{
         try{
           // time kyar aung loke tar
-          await new Promise((resolve,reject)=>{
-              setTimeout(resolve,2000);
-          })
+          // await new Promise((resolve,reject)=>{
+          //     setTimeout(resolve,2000);
+          // })
           let response=await fetch('http://localhost:3000/posts');
           // console.log(response);
     
