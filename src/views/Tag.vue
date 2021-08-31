@@ -4,9 +4,9 @@
 
   <div v-if="filteredPosts.length" class="layout">
       <div><PostList :posts="filteredPosts"></PostList></div>
-      <div><TagCloud></TagCloud></div>
+      <div><TagCloud :posts="posts"></TagCloud></div>
   </div>
-  
+
   <div v-else>
       Loading....
   </div>

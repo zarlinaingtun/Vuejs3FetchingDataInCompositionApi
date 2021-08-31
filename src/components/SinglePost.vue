@@ -25,6 +25,9 @@ export default {
 </script>
 
 <style>
+h2{
+    text-transform: uppercase;
+}
 .post{
     width:400px;
     margin:40px;
@@ -33,7 +36,7 @@ export default {
 }
 .post h2{
     display: inline-block;
-    background: yellow;
+    background: orange;
     padding: 5px;
     border-radius: 4px;
 }

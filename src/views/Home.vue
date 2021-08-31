@@ -9,7 +9,7 @@
       <!-- Posts -->
      <div><PostList :posts="posts"></PostList></div>
       <!-- Tag Cloud -->
-     <div><TagCloud></TagCloud></div>
+     <div><TagCloud :posts="posts"></TagCloud></div>
    </div>
    <div v-else>
      <Spinner></Spinner>
