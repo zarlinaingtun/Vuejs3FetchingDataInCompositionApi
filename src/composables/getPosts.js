@@ -24,7 +24,7 @@ let myPosts=()=>{
 
 
           // Firebase
-          let res=await db.collection('posts').get();
+          let res=await db.collection('posts').orderBy("created_at","desc").get();
           console.log(res.docs);//[n,n]
 
           //map return [{},{}]

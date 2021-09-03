@@ -28,7 +28,7 @@
 <script>
 import { ref } from '@vue/reactivity';
 import {useRouter} from 'vue-router';
-import {db} from '../firebase/config';
+import {db,timestamp} from '../firebase/config';
 export default{
     setup(){
         let router=useRouter();
@@ -61,7 +61,8 @@ export default{
         //Firebase
         let addPost={title:title.value,//''
                    body:body.value,//''
-                   tags:tags.value//[]
+                   tags:tags.value,//[]
+                   created_at:timestamp()
         }
         let res=await db.collection('posts').add(addPost);
         // console.log(res.id);//
@@ -135,6 +136,8 @@ button{
     color:#fff;
     border:0;
     font-size: 16px;  
+
+    cursor: pointer;
 }
 .pill{
     display: inline-block;
